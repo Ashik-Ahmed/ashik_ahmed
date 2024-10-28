@@ -5,24 +5,12 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('ttf'),
-    url('/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
-  font-weight: normal;
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  /* Adjust based on the font weights available in the variable font */
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('ttf'),
-    url('/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+:root {
+  font-family: 'Montserrat', sans-serif;
 }

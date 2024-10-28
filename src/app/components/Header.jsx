@@ -49,8 +49,8 @@ const Header = () => {
     ]
 
     return (
-        <header className="container py-4">
-            <nav className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="py-4">
+            <nav className="container max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center justify-between w-full">
                         <div className="flex-shrink-0">
@@ -68,7 +68,7 @@ const Header = () => {
                                     <Link
                                         key={menu.id}
                                         href={menu.link}
-                                        className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                                        className="text-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                                     >
                                         {menu.name}
                                     </Link>
