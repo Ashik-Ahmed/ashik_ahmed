@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 
 // const montserrat = localFont({
 //   src: "./fonts/Montserrat-VariableFont_wght.ttf",

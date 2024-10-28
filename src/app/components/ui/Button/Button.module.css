@@ -1,18 +1,17 @@
-button {
+.button {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0px;
     background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     overflow: hidden;
     cursor: pointer;
     border: none;
 }
 
-button:after {
+.button::after {
     content: " ";
     width: 0%;
     height: 100%;
@@ -22,13 +21,13 @@ button:after {
     right: 0;
 }
 
-button:hover::after {
+.button:hover::after {
     right: auto;
     left: 0;
     width: 100%;
 }
 
-button span {
+.button span {
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -41,7 +40,7 @@ button span {
     transition: all 0.3s ease-in-out;
 }
 
-button:hover span {
+.button:hover span {
     color: #fff;
     animation: scaleUp 0.3s ease-in-out;
 }
