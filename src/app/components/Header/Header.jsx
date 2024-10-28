@@ -5,7 +5,8 @@ import styles from "./Header.module.css";
 import Button from "../ui/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react";
+import SocialIcon from "../ui/SocialIcon/SocialIcon";
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -57,6 +58,24 @@ const Header = () => {
         // }
     ];
 
+    const socials = [
+        {
+            id: 1,
+            link: "https://www.facebook.com/ashik.ahmed.568",
+            icon: <Linkedin />,
+        },
+        {
+            id: 2,
+            link: "https://twitter.com/ashik_ahmed",
+            icon: <Facebook />,
+        },
+        {
+            id: 3,
+            link: "https://github.com/ashikahmed",
+            icon: <Instagram />,
+        },
+    ];
+
     return (
         <header className="py-4">
             <nav className="container max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,10 +106,16 @@ const Header = () => {
                                 <Button label="Contact" />
                             </div>
                         </div>
-                        <div className="md:hidden">
-
-                            <Menu onClick={toggleSidebar} size={36} className="text-primary" />
-                        </div>
+                        {
+                            !isSidebarOpen && (
+                                <div
+                                    className="md:hidden"
+                                    onClick={toggleSidebar}
+                                >
+                                    <Menu size={36} className="text-primary" />
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </nav>
@@ -99,7 +124,7 @@ const Header = () => {
                 <div
                     className={`fixed inset-0 z-50 flex ${isSidebarOpen ? "sidebar-enter" : "sidebar-exit"}`}
                 >
-                    <div className="w-80 p-2 bg-gray-200 text-gray-700">
+                    <div className="w-80 p-2 bg-gray-100 text-gray-700">
 
                         <div className="flex items-center justify-between">
                             <div>
@@ -111,7 +136,7 @@ const Header = () => {
                                     height={64}
                                 />
                             </div>
-                            <X onClick={toggleSidebar} className="" />
+                            <X onClick={toggleSidebar} size={36} className="text-primary" />
                         </div>
 
                         <div className="mt-8">
@@ -125,6 +150,20 @@ const Header = () => {
                                     {menu.name}
                                 </Link>
                             ))}
+                        </div>
+                        <div className="mt-8">
+                            <p>FIND WITH ME</p>
+                            <div className="flex gap-2 mt-4">
+                                {
+                                    socials.map((social) => (
+                                        <SocialIcon
+                                            key={social.id}
+                                            link={social.link}
+                                            icon={social.icon}
+                                        />
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
 
