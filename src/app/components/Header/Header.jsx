@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./Header.module.css";
+import "./Header.css"
 import Button from "../ui/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
@@ -121,10 +121,8 @@ const Header = () => {
             </nav>
 
             {isSidebarOpen && (
-                <div
-                    className={`fixed inset-0 z-50 flex ${isSidebarOpen ? "sidebar-enter" : "sidebar-exit"}`}
-                >
-                    <div className="w-80 p-2 bg-gray-100 text-gray-700">
+                <div className="fixed inset-0 z-50 flex bg-black bg-opacity-50">
+                    <div className={`w-80 p-2 bg-gray-100 text-gray-700 ${isSidebarOpen ? "sidebar-enter" : "sidebar-exit"}`}>
 
                         <div className="flex items-center justify-between">
                             <div>
@@ -151,9 +149,9 @@ const Header = () => {
                                 </Link>
                             ))}
                         </div>
-                        <div className="mt-8">
+                        <div className="absolute bottom-28">
                             <p>FIND WITH ME</p>
-                            <div className="flex gap-2 mt-4">
+                            <div className="flex gap-4 mt-4">
                                 {
                                     socials.map((social) => (
                                         <SocialIcon
@@ -167,7 +165,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1 bg-black opacity-50" onClick={toggleSidebar}></div>
+                    {/* <div className=" bg-black opacity-50" onClick={toggleSidebar}></div> */}
 
                 </div>
             )}

@@ -4,4 +4,15 @@
     background: linear-gradient(145deg, #cacaca, #ffffff);
     box-shadow: 3px 3px 10px #cacaca,
         -3px -3px 10px #ffffff;
+    transition: transform 0.4s;
+}
+
+.button:hover {
+    background: #E80B31;
+    transform: translateY(-5px);
+}
+
+.button:hover span {
+    color: #ffffff;
+    transition: 0.4s;
 }
