@@ -24,10 +24,10 @@ const Hero = () => {
     ];
 
     return (
-        <section id='#' className='container pb-20 mx-auto'>
+        <section id='#' className='container pb-20 mx-auto border-b border-gray-300'>
             <div className='md:flex justify-between items-center'>
                 <div className='md:w-1/2 md:order-2'>
-                    <Image src="/ashik_ahmed.png" alt="hero" width={500} height={500} className='mx-auto border-2 border-primary' />
+                    <Image src="/ashik_ahmed.png" alt="ashik ahmed" width={500} height={500} className='mx-auto' />
                 </div>
                 <div className='md:w-1/2 md:order-1 mt-8 md:mt-0'>
                     <p className='text-xl mb-8'>WELCOME TO MY WORLD</p>
