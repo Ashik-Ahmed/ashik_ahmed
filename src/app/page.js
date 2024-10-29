@@ -3,7 +3,7 @@ import Services from "./components/Services/Services";
 
 export default function Home() {
   return (
-    <main className="px-4">
+    <main className="px-4 max-w-6xl mx-auto">
       <Hero />
       <Services />
     </main>
