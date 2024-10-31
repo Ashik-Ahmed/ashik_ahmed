@@ -23,8 +23,8 @@ const Header = () => {
         },
         {
             id: 2,
-            name: "Features",
-            link: "/features",
+            name: "Services",
+            link: "#services",
         },
         {
             id: 3,
@@ -77,7 +77,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="py-4">
+        <header className="py-2 bg-gray-200 shadow-md fixed top-0 left-0 w-full z-20">
             <nav className="container max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center justify-between w-full">
