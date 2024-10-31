@@ -25,14 +25,14 @@ const Hero = () => {
 
     return (
         <section id='#' className='container pb-20 mx-auto border-b border-gray-300'>
-            <div className='md:flex justify-between items-center'>
-                <div className='md:w-1/2 md:order-2'>
+            <div className='md:flex md:justify-between md:gap-2 items-center'>
+                <div className='md:w-5/12 md:order-2'>
                     <Image src="/ashik_ahmed.png" alt="ashik ahmed" width={500} height={500} className='mx-auto' />
                 </div>
-                <div className='md:w-1/2 md:order-1 mt-8 md:mt-0'>
+                <div className='md:w-7/12 md:order-1 mt-8 md:mt-0'>
                     <p className='text-xl mb-8'>WELCOME TO MY WORLD</p>
-                    <h1 className='md:text-7xl text-3xl font-extrabold'>Hi, I&apos;m <span className='text-primary'>Ashik Ahmed</span></h1>
-                    <h2 className='md:text-5xl text-2xl font-bold mt-8'> <span className='text-primary'>a</span> Software Developer</h2>
+                    <h1 className='md:text-6xl text-3xl font-extrabold'>Hi, I&apos;m <span className='text-primary'>Ashik Ahmed</span></h1>
+                    <h2 className='md:text-4xl text-2xl font-bold mt-8'> <span className='text-primary'>a</span> Software Developer</h2>
 
                     <div className="mt-16">
                         <p>FIND WITH ME</p>
