@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    background: linear-gradient(145deg, #d9dcdf, #f0f0f0);
     box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
     overflow: hidden;
     cursor: pointer;

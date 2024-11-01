@@ -63,7 +63,7 @@ export default Services;
 
 const ServiceCard = ({ icon, title, description }) => {
     return (
-        <div className={`${styles.card} w-[350px] cursor-pointer shrink-0 flex flex-col items-start gap-3 group`}>
+        <div className={`${styles.card} cursor-pointer shrink-0 flex flex-col items-start gap-3 group`}>
             <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#FF5800] group-hover:scale-[900%] duration-500 z-[-1] op" />
             <Globe size={50} className='text-primary group-hover:text-white mb-6' />
             <p className="font-bold text-2xl group-hover:text-white text-black/80">
