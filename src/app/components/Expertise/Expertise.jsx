@@ -114,7 +114,7 @@ const Expertise = () => {
     return (
         <section id='expertise' className='container py-20 mx-auto border-b border-gray-300'>
             <p className=' text-primary'>EXPERTISE</p>
-            <h2 className='text-7xl font-bold text-gray-800 my-4'>Skills I Have</h2>
+            <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Skills I Have</h2>
             <div>
                 <div className='mt-8'>
                     <p className='text-xl text-primary font-semibold'>Frontend:</p>

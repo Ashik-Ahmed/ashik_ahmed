@@ -46,8 +46,8 @@ const Services = () => {
     return (
         <section id='services' className='container py-20 mx-auto border-b border-gray-300'>
             <p className=' text-primary'>SERVICES</p>
-            <h2 className='text-7xl font-bold text-gray-800 my-4'>What I Do</h2>
-            <div className='flex flex-wrap justify-around gap-8 mt-16'>
+            <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>What I Do</h2>
+            <div className='flex flex-wrap justify-around gap-8 mt-8'>
                 {
                     services.map((service) => (
                         <ServiceCard key={service.id} icon={service.icon} title={service.title} description={service.description} />
