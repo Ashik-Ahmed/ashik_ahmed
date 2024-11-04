@@ -14,5 +14,5 @@
 .card:hover {
     background: #E80B31;
     transform: translateY(0.5em);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s, background 0.8s ease-in-out;
 }
