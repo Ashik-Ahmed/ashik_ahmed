@@ -1,3 +1,4 @@
+import Experience from "./components/Experience/Experience";
 import Expertise from "./components/Expertise/Expertise";
 import Hero from "./components/Hero/Hero";
 import Portfolio from "./components/Portfolio/Portfolio";
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <Expertise />
       <Portfolio />
+      <Experience />
     </main>
   );
 }
