@@ -87,8 +87,8 @@ const ProjectCard = ({ id, name, image, description, tags }) => {
     const { bgColor, textColor } = getRandomColorPair();
 
     return (
-        <div className={`${styles.card} relative flex flex-col justify-between gap-4 w-80 h-[370px] rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
-            <div className="w-full p-4 h-[14rem] bg-white rounded-xl overflow-hidden">
+        <div className={`${styles.card} relative flex flex-col justify-between gap-4 w-80 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
+            <div className="w-full p-4 min-h-[14rem] bg-white rounded-xl overflow-hidden">
                 <Image
                     src={image}
                     alt={name}

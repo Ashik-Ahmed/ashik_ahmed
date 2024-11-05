@@ -77,13 +77,13 @@ const Header = () => {
     ];
 
     return (
-        <header className="py-2 bg-[#ECF0F3]  fixed top-0 left-0 w-full z-20">
+        <header className="py-2 bg-[#ECF0F3] shadow-md fixed top-0 left-0 w-full z-20">
             <nav className="container max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center justify-between w-full">
                         <div className="flex-shrink-0">
                             <Image
-                                className="h-16 w-16 rounded-full border-4 border-primary"
+                                className="h-16 w-16 rounded-full border-4 border-gray-400 shadow-lg"
                                 src="/ashik_ahmed.png"
                                 alt="Ashik Ahmed"
                                 width={64}
