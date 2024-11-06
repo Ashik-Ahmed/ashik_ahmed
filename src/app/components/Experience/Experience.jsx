@@ -12,7 +12,7 @@ const Experience = () => {
         },
         {
             title: "Freelance Web Developer",
-            organization: "College of Studies",
+            organization: "",
             period: "2022 - Present",
             description: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
             duration: `${Math.floor((new Date() - new Date(2022, 5)) / (1000 * 60 * 60 * 24 * 365))}+ Years`
@@ -56,7 +56,7 @@ const ExperienceCard = ({ experience }) => {
             {/* Experience card */}
             <div className={`${styles.card} rounded-lg shadow-md p-6 relative group`}>
                 {/* Rating badge */}
-                <div className="absolute top-4 right-4 bg-white group-hover:bg-pink-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
+                <div className="absolute top-4 right-4 bg-white group-hover:bg-pink-500 transition-all duration-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
                     {experience?.duration}
                 </div>
 

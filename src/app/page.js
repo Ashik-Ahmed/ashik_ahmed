@@ -1,3 +1,4 @@
+import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 import Expertise from "./components/Expertise/Expertise";
 import Hero from "./components/Hero/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Expertise />
       <Portfolio />
       <Experience />
+      <Education />
     </main>
   );
 }
