@@ -1,3 +1,4 @@
+import Blogs from "./components/Blogs/Blogs";
 import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 import Expertise from "./components/Expertise/Expertise";
@@ -14,6 +15,7 @@ export default function Home() {
       <Portfolio />
       <Experience />
       <Education />
+      <Blogs />
     </main>
   );
 }
