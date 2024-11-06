@@ -61,17 +61,19 @@ const EducationCard = ({ education }) => {
             <div className="absolute left-3 top-9 w-5 h-1 bg-gray-400" />
 
             {/* Experience card */}
-            <div className={`${styles.card} rounded-lg shadow-md p-6 relative group`}>
-                <div className='flex justify-between'>
-                    <h3 className="text-xl font-semibold mb-1">{education?.institute}</h3>
+            <div className={`${styles.card} w-[330px] md:w-[700px] rounded-lg shadow-md p-4 md:p-6 relative group`}>
+                <div className='md:flex justify-between'>
+                    <div>
+                        <h3 className="text-md md:text-xl font-semibold mb-1">{education?.institute}</h3>
+                        <p className="text-sm mb-4">
+                            {education?.degree} ({education?.period})
+                        </p>
+                    </div>
                     {/* Result badge */}
-                    <div className="bg-white h-full group-hover:bg-pink-500 transition-all duration-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
+                    <div className="w-fit h-fit bg-white group-hover:bg-primary transition-all duration-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
                         {education?.result}
                     </div>
                 </div>
-                <p className="text-sm mb-4">
-                    {education?.organization} ({education?.period})
-                </p>
                 <div className='w-full h-0.5 my-6 bg-gray-300' />
                 <p>{education?.description}</p>
             </div>

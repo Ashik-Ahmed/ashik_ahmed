@@ -11,7 +11,7 @@ const Experience = () => {
             duration: `${Math.floor((new Date() - new Date(2019, 5)) / (1000 * 60 * 60 * 24 * 365))}+ Years`
         },
         {
-            title: "Freelance Web Developer",
+            title: "Freelance Software Developer",
             organization: "",
             period: "2022 - Present",
             description: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
@@ -54,16 +54,21 @@ const ExperienceCard = ({ experience }) => {
             <div className="absolute left-3 top-9 w-5 h-1 bg-gray-400" />
 
             {/* Experience card */}
-            <div className={`${styles.card} rounded-lg shadow-md p-6 relative group`}>
-                {/* Rating badge */}
-                <div className="absolute top-4 right-4 bg-white group-hover:bg-pink-500 transition-all duration-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
-                    {experience?.duration}
-                </div>
+            <div className={`${styles.card} w-[330px] md:w-[700px] rounded-lg shadow-md p-4 md:p-6 relative group`}>
 
-                <h3 className="text-xl font-semibold mb-1">{experience?.title}</h3>
-                <p className="text-sm mb-4">
-                    {experience?.organization} ({experience?.period})
-                </p>
+
+                <div className='md:flex justify-between'>
+                    <div>
+                        <h3 className="text-md md:text-xl font-semibold mb-1">{experience?.title}</h3>
+                        <p className="text-sm mb-4">
+                            {experience?.organization} ({experience?.period})
+                        </p>
+                    </div>
+                    {/* Duration badge */}
+                    <div className="w-fit h-fit bg-white group-hover:bg-primary transition-all duration-500 text-primary group-hover:text-white shadow-lg rounded-md px-4 py-2 text-sm font-medium">
+                        {experience?.duration}
+                    </div>
+                </div>
                 <div className='w-full h-0.5 my-6 bg-gray-300' />
                 <p>{experience?.description}</p>
             </div>
