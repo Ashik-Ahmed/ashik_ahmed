@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './Contact.module.css'
 import Image from 'next/image';
 import SocialIcon from '../ui/SocialIcon/SocialIcon';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { ArrowRight, ArrowRightIcon, Facebook, Instagram, Linkedin } from 'lucide-react';
+import Button from '../ui/Button/Button';
 
 const Contact = () => {
 
@@ -31,8 +32,8 @@ const Contact = () => {
                 <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Contact</h2>
             </div>
 
-            <div className="flex mt-8">
-                <div className={`${styles.card} relative flex flex-col justify-between gap-4 w-80 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
+            <div className="flex gap-x-16 mt-8">
+                <div className={`${styles.card} w-5/12 relative flex flex-col justify-between gap-4 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
                     <div className="w-full min-h-[14rem] bg-white rounded-xl overflow-hidden">
                         <Image
                             src="/contact.png"
@@ -67,19 +68,37 @@ const Contact = () => {
                             }
                         </div>
                     </div>
-                    {/* <div className="mt-6 flex-1">
-                        <div className="flex items-center gap-2 text-sm">
-                            <Clock4 size={16} />
-                            {blog?.duration}
-                        </div>
-                        <div className="mt-4">
-                            <h5 className="relative mb-2 cursor-pointer text-xl font-semibold leading-snug tracking-normal text-gray-900 hover:text-primary antialiased line-clamp-2">
-                                {blog?.title}
-                                <ArrowUpRight className="inline opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            </h5>
-                        </div>
-                    </div> */}
                 </div>
+                <form className={`${styles.card} w-7/12 relative flex flex-col gap-4 rounded-xl bg-clip-border text-gray-700 shadow-md`}>
+                    <div className="md:flex md:gap-x-8">
+                        <div className="w-full md:w-1/2 ">
+                            <span className="uppercase">Your Name</span>
+                            <input id='name' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                        </div>
+                        <div className="w-full md:w-1/2 ">
+                            <span className="uppercase">Phone Number</span>
+                            <input id='phone' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                        </div>
+                    </div>
+                    <div className="">
+                        <span className="uppercase">Email</span>
+                        <input id='email' type="email" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                    </div>
+                    <div className="">
+                        <span className="uppercase">Subject</span>
+                        <input id='subject' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                    </div>
+                    <div className="">
+                        <span className="uppercase">Your Message</span>
+                        <textarea id='message' type="text" required className='input input-bordered w-full h-[200px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                    </div>
+
+                    <div>
+                        <button type='submit' className={`${styles.button} w-full h-[50px]`}>
+                            <span className='uppercase flex gap-x-2 justify-center items-center'>Send Message <ArrowRightIcon /></span>
+                        </button>
+                    </div>
+                </form>
             </div>
 
         </section>
