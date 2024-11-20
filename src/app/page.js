@@ -1,4 +1,5 @@
 import Blogs from "./components/Blogs/Blogs";
+import Contact from "./components/Contact/Contact";
 import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 import Expertise from "./components/Expertise/Expertise";
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <Education />
       <Blogs />
+      <Contact />
     </main>
   );
 }
