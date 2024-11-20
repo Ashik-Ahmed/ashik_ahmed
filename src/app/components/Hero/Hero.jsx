@@ -25,11 +25,23 @@ const Hero = () => {
 
     return (
         <section id='#' className='container pb-20 mx-auto border-b border-gray-300'>
-            <div className='md:flex md:justify-between md:gap-2 items-center'>
-                <div className='md:w-5/12 md:order-2'>
-                    <Image src="/ashik_ahmed.png" alt="ashik ahmed" width={500} height={500} className='mx-auto' />
+            <div className='md:flex md:justify-between md:gap-x-8 items-center'>
+                <div className='md:w-4/12 md:order-2'>
+                    <div className="relative">
+                        {/* Gray background rectangle */}
+                        <div className="absolute bottom-4 left-0 w-full h-4/6 bg-gradient-to-r from-gray-300 to-gray-200 z-0 rounded-lg shadow-lg"></div>
+                        {/* Image */}
+                        <Image
+                            src="/ashik_ahmed.png"
+                            alt="ashik ahmed"
+                            width={500}
+                            height={500}
+                            className='relative w-full h-[500px] z-10 mx-auto'
+                        />
+                    </div>
                 </div>
-                <div className='md:w-7/12 md:order-1 mt-8 md:mt-0'>
+
+                <div className='md:w-8/12 md:order-1 mt-8 md:mt-0'>
                     <p className='text-xl mb-8'>WELCOME TO MY WORLD</p>
                     <h1 className='md:text-6xl text-3xl font-extrabold'>Hi, I&apos;m <span className='text-primary'>Ashik Ahmed</span></h1>
                     <h2 className='md:text-4xl text-2xl font-bold mt-8'> <span className='text-primary'>a</span> Software Developer</h2>
