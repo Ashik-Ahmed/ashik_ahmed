@@ -25,6 +25,12 @@ const Contact = () => {
         },
     ];
 
+    const handleEmailSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("Email submitted");
+    };
+
     return (
         <section id='blogs' className='container py-20 mx-auto border-b border-gray-300'>
             <div className='text-center'>
