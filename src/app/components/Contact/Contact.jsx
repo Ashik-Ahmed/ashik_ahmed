@@ -1,9 +1,10 @@
+"use client";
+
 import React from 'react';
 import styles from './Contact.module.css'
 import Image from 'next/image';
 import SocialIcon from '../ui/SocialIcon/SocialIcon';
-import { ArrowRight, ArrowRightIcon, Facebook, Instagram, Linkedin } from 'lucide-react';
-import Button from '../ui/Button/Button';
+import { ArrowRightIcon, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Contact = () => {
 
@@ -29,6 +30,15 @@ const Contact = () => {
         e.preventDefault();
 
         console.log("Email submitted");
+        const formData = {
+            name: e.target.name.value,
+            phone: e.target.phone.value,
+            email: e.target.email.value,
+            subject: e.target.subject.value,
+            message: e.target.message.value,
+        };
+
+        console.log("Form submitted with data:", formData);
     };
 
     return (
@@ -75,11 +85,11 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <form className={`${styles.card} w-7/12 relative flex flex-col gap-4 rounded-xl bg-clip-border text-gray-700 shadow-md`}>
+                <form onSubmit={handleEmailSubmit} className={`${styles.card} w-7/12 relative flex flex-col gap-4 rounded-xl bg-clip-border text-gray-700 shadow-md`}>
                     <div className="md:flex md:gap-x-8">
                         <div className="w-full md:w-1/2 ">
                             <span className="uppercase">Your Name</span>
-                            <input id='name' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
+                            <input id='name' name='name' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
                         </div>
                         <div className="w-full md:w-1/2 ">
                             <span className="uppercase">Phone Number</span>
