@@ -42,15 +42,15 @@ const Contact = () => {
     };
 
     return (
-        <section id='blogs' className='container py-20 mx-auto border-b border-gray-300'>
+        <section id='contact' className='container py-20 mx-auto border-b border-gray-300'>
             <div className='text-center'>
                 <p className=' text-primary'>LET&apos;S CONNECT</p>
                 <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Contact</h2>
             </div>
 
-            <div className="flex gap-x-16 mt-8">
-                <div className={`${styles.card} w-5/12 relative flex flex-col justify-between gap-4 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
-                    <div className="w-full min-h-[14rem] bg-white rounded-xl overflow-hidden">
+            <div className="flex flex-col md:flex-row gap-16 mt-8">
+                <div className={`${styles.card} md:w-5/12 relative flex flex-col justify-between gap-4 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
+                    <div className="w-full  bg-white rounded-xl overflow-hidden">
                         <Image
                             src="/contact.png"
                             alt="contact ashik ahmed"
@@ -85,8 +85,8 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleEmailSubmit} className={`${styles.card} w-7/12 relative flex flex-col gap-4 rounded-xl bg-clip-border text-gray-700 shadow-md`}>
-                    <div className="md:flex md:gap-x-8">
+                <form onSubmit={handleEmailSubmit} className={`${styles.card} md:w-7/12 relative flex flex-col gap-8 rounded-xl bg-clip-border text-gray-700 shadow-md`}>
+                    <div className="flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-1/2 ">
                             <span className="uppercase">Your Name</span>
                             <input id='name' name='name' type="text" required className='input input-bordered w-full h-[50px] p-2 mt-2 rounded-md border-[3px] border-gray-300 focus:outline-primary' />
