@@ -96,7 +96,7 @@ const Header = () => {
                                     <Link
                                         key={menu.id}
                                         href={menu.link}
-                                        className="text-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                                        className="text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase"
                                     >
                                         {menu.name}
                                     </Link>
