@@ -11,9 +11,18 @@ import SocialIcon from "../ui/SocialIcon/SocialIcon";
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("/");
+    const [isClosing, setIsClosing] = useState(false);
 
     const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
+        if (isSidebarOpen) {
+            setIsClosing(true);
+            setTimeout(() => {
+                setIsSidebarOpen(false);
+                setIsClosing(false);
+            }, 800); // Match the animation duration
+        } else {
+            setIsSidebarOpen(true);
+        }
     };
 
     useEffect(() => {
@@ -75,13 +84,13 @@ const Header = () => {
     ];
 
     return (
-        <header className="py-2 bg-[#ECF0F3] shadow-md fixed top-0 left-0 w-full z-20">
+        <header className={`py-2 bg-[#ECF0F3] fixed top-0 left-0 w-full z-20 ${activeSection !== "/" && "shadow-md"}`}>
             <nav className="container max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center justify-between w-full">
                         <div className="flex-shrink-0">
                             <Image
-                                className="h-16 w-16 rounded-full border-4 border-gray-400 shadow-lg"
+                                className="h-16 w-16 rounded-full border-2 border-gray-300 shadow-lg"
                                 src="/ashik_ahmed.png"
                                 alt="Ashik Ahmed"
                                 width={64}
@@ -95,16 +104,16 @@ const Header = () => {
                                         key={menu.id}
                                         href={menu.link}
                                         className={`relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group ${(menu.link === "/" && activeSection === "/") ||
-                                                (menu.link.replace('/#', '') === activeSection)
-                                                ? 'text-primary'
-                                                : ''
+                                            (menu.link.replace('/#', '') === activeSection)
+                                            ? 'text-primary'
+                                            : ''
                                             }`}
                                     >
                                         {menu.name}
                                         <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link === "/" && activeSection === "/") ||
-                                                (menu.link.replace('/#', '') === activeSection)
-                                                ? 'w-full'
-                                                : ''
+                                            (menu.link.replace('/#', '') === activeSection)
+                                            ? 'w-full'
+                                            : ''
                                             }`}></span>
                                     </Link>
                                 ))}
@@ -129,14 +138,17 @@ const Header = () => {
                 </div>
             </nav>
 
-            {isSidebarOpen && (
+            {(isSidebarOpen || isClosing) && (
                 <div className="fixed inset-0 z-50 flex bg-black bg-opacity-50">
-                    <div className={`w-80 p-2 bg-gray-100 text-gray-700 ${isSidebarOpen ? "sidebar-enter" : "sidebar-exit"}`}>
+                    <div className={`w-80 p-2 bg-gray-100 text-gray-700 
+                    ${isSidebarOpen && !isClosing ? "sidebar-enter" : ""}
+                    ${isClosing ? "sidebar-exit" : ""}`}
+                    >
 
                         <div className="flex items-center justify-between">
                             <div>
                                 <Image
-                                    className="h-16 w-16 rounded-full border-4 border-white"
+                                    className="h-16 w-16 rounded-full border-2 border-gray-300"
                                     src="/ashik_ahmed.png"
                                     alt="Ashik Ahmed"
                                     width={64}
@@ -153,9 +165,9 @@ const Header = () => {
                                     href={menu.link}
                                     onClick={toggleSidebar}
                                     className={`block px-4 py-2 text-gray-800 hover:bg-primary hover:bg-opacity-20 ${(menu.link === "/" && activeSection === "/") ||
-                                            (menu.link.replace('/#', '') === activeSection)
-                                            ? 'bg-primary bg-opacity-10'
-                                            : ''
+                                        (menu.link.replace('/#', '') === activeSection)
+                                        ? 'bg-primary bg-opacity-10'
+                                        : ''
                                         }`}
                                 >
                                     {menu.name}
