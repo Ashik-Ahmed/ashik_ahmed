@@ -5,6 +5,7 @@ import styles from './Contact.module.css'
 import Image from 'next/image';
 import SocialIcon from '../ui/SocialIcon/SocialIcon';
 import { ArrowRightIcon, Facebook, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 const Contact = () => {
 
@@ -61,13 +62,33 @@ const Contact = () => {
                     </div>
 
                     <div>
-                        <h1 className="relative mb-2 cursor-pointer text-4xl font-bold leading-snug tracking-normal text-gray-900 antialiased line-clamp-2">Ashik Ahmed</h1>
-                        <h3 className="relative mb-2 cursor-pointer text-xl font-semibold leading-snug tracking-normal text-gray-700 antialiased line-clamp-2">Software Engineer</h3>
+                        <h1 className="relative mb-2 text-4xl font-bold leading-snug tracking-normal text-gray-900 antialiased line-clamp-2">Ashik Ahmed</h1>
+                        <h3 className="relative mb-2 text-xl font-semibold leading-snug tracking-normal text-gray-700 antialiased line-clamp-2">Software Engineer</h3>
 
                         <p className="my-4">I am a software engineer based in Dhaka, Bangladesh. I specialize in web development and have experience working on a wide range of projects.</p>
 
-                        <p>Phone: <span className='hover:text-primary hover:border-primary hover:border-b'>+880 1521 464 568</span></p>
-                        <p>Email: <span className='hover:text-primary hover:border-primary hover:border-b'>ashikahmed121@gmail.com</span></p>
+                        <p className="inline-block">
+                            Whatsapp:
+                            <Link
+                                href="https://wa.me/+8801521464568"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ml-2 hover:text-primary group/item relative inline-block">
+                                +880 1521 464 568
+                                <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
+                            </Link>
+                        </p>
+                        <p className="inline-block mt-2">
+                            Email:
+                            <Link
+                                href="mailto:ashikahmed121@gmail.com"
+                                className="ml-2 hover:text-primary group/item relative inline-block">
+                                ashikahmed121@gmail.com
+                                <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
+                            </Link>
+                        </p>
+
+
                     </div>
                     <div className="mt-16">
                         <p className="text-gray-900">FIND WITH ME</p>
