@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css"
 import Button from "../ui/Button/Button";
 import Image from "next/image";
@@ -10,52 +10,50 @@ import SocialIcon from "../ui/SocialIcon/SocialIcon";
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("/");
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = [
+                "services", "expertise", "portfolio",
+                "experience", "education", "blogs", "contact"
+            ];
+
+            // Check if at top of page
+            if (window.scrollY < 100) {
+                setActiveSection("/");
+                return;
+            }
+
+            // Check other sections
+            for (let section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        setActiveSection(section);
+                        return;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const menus = [
-        {
-            id: 1,
-            name: "Home",
-            link: "/",
-        },
-        {
-            id: 2,
-            name: "Services",
-            link: "#services",
-        },
-        {
-            id: 3,
-            name: "Expertise",
-            link: "#expertise",
-        },
-        {
-            id: 4,
-            name: "Portfolio",
-            link: "#portfolio",
-        },
-        {
-            id: 5,
-            name: "Experience",
-            link: "#experience",
-        },
-        {
-            id: 6,
-            name: "Education",
-            link: "#education",
-        },
-        {
-            id: 7,
-            name: "Blogs",
-            link: "#blogs",
-        },
-        // {
-        //     id: 8,
-        //     name: 'Contact',
-        //     link: '/contact'
-        // }
+        { id: 1, name: "Home", link: "/" },
+        { id: 2, name: "Services", link: "/#services" },
+        { id: 3, name: "Expertise", link: "/#expertise" },
+        { id: 4, name: "Portfolio", link: "/#portfolio" },
+        { id: 5, name: "Experience", link: "/#experience" },
+        { id: 6, name: "Education", link: "/#education" },
+        { id: 7, name: "Blogs", link: "/#blogs" },
     ];
 
     const socials = [
@@ -96,10 +94,18 @@ const Header = () => {
                                     <Link
                                         key={menu.id}
                                         href={menu.link}
-                                        className="relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group"
+                                        className={`relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group ${(menu.link === "/" && activeSection === "/") ||
+                                                (menu.link.replace('/#', '') === activeSection)
+                                                ? 'text-primary'
+                                                : ''
+                                            }`}
                                     >
                                         {menu.name}
-                                        <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                                        <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link === "/" && activeSection === "/") ||
+                                                (menu.link.replace('/#', '') === activeSection)
+                                                ? 'w-full'
+                                                : ''
+                                            }`}></span>
                                     </Link>
                                 ))}
                             </div>
@@ -146,7 +152,11 @@ const Header = () => {
                                     key={menu.id}
                                     href={menu.link}
                                     onClick={toggleSidebar}
-                                    className="block px-4 py-2 text-gray-800 hover:bg-primary hover:bg-opacity-20"
+                                    className={`block px-4 py-2 text-gray-800 hover:bg-primary hover:bg-opacity-20 ${(menu.link === "/" && activeSection === "/") ||
+                                            (menu.link.replace('/#', '') === activeSection)
+                                            ? 'bg-primary bg-opacity-10'
+                                            : ''
+                                        }`}
                                 >
                                     {menu.name}
                                 </Link>
@@ -167,9 +177,6 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className=" bg-black opacity-50" onClick={toggleSidebar}></div> */}
-
                 </div>
             )}
         </header>
