@@ -96,9 +96,10 @@ const Header = () => {
                                     <Link
                                         key={menu.id}
                                         href={menu.link}
-                                        className="text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase"
+                                        className="relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group"
                                     >
                                         {menu.name}
+                                        <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 ))}
                             </div>
