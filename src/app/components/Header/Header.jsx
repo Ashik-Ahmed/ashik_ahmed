@@ -28,28 +28,28 @@ const Header = () => {
         },
         {
             id: 3,
-            name: "Portfolio",
-            link: "/portfolio",
+            name: "Expertise",
+            link: "#expertise",
         },
         {
             id: 4,
-            name: "Resume",
-            link: "/resume",
+            name: "Portfolio",
+            link: "#portfolio",
         },
         {
             id: 5,
-            name: "Clients",
-            link: "/clients",
+            name: "Experience",
+            link: "#experience",
         },
         {
             id: 6,
-            name: "Pricing",
-            link: "/pricing",
+            name: "Education",
+            link: "#education",
         },
         {
             id: 7,
-            name: "Blog",
-            link: "/blog",
+            name: "Blogs",
+            link: "#blogs",
         },
         // {
         //     id: 8,
