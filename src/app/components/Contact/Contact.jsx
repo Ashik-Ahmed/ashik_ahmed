@@ -75,7 +75,7 @@ const Contact = () => {
                                 rel="noopener noreferrer"
                                 className="ml-2 hover:text-primary group/item relative inline-block">
                                 +880 1521 464 568
-                                <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
+                                <span className="absolute left-0 bottom-0 block h-[1px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
                             </Link>
                         </p>
                         <p className="inline-block mt-2">
@@ -84,7 +84,7 @@ const Contact = () => {
                                 href="mailto:ashikahmed121@gmail.com"
                                 className="ml-2 hover:text-primary group/item relative inline-block">
                                 ashikahmed121@gmail.com
-                                <span className="absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
+                                <span className="absolute left-0 bottom-0 block h-[1px] w-0 bg-primary transition-all duration-300 group-hover/item:w-full"></span>
                             </Link>
                         </p>
 
