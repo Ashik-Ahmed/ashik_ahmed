@@ -1,4 +1,12 @@
-import { ArrowRight, Globe, Menu, Tag } from 'lucide-react';
+import {
+    Code2,
+    Building2,
+    Briefcase,
+    RocketIcon,
+    SearchCode,
+    Globe,
+    ArrowRight
+} from 'lucide-react';
 import React from 'react';
 import styles from './Services.module.css';
 
@@ -6,41 +14,42 @@ const Services = () => {
     const services = [
         {
             id: 1,
-            icon: <Tag />,
-            title: "Custom Software Solution",
-            description: "I create tailored software solutions designed to meet your unique business needs.",
+            icon: Globe,
+            title: "Web Development",
+            description: "Create responsive, feature-rich websites that work flawlessly on every device and screen size.",
         },
         {
             id: 2,
-            icon: <Menu />,
-            title: "Corporate Website",
-            description: "Building fast, user-friendly, and professional websites for corporations.",
+            icon: Code2,
+            title: "Custom Software",
+            description: "Transform your business with scalable, custom-built solutions that streamline operations and boost efficiency.",
         },
         {
             id: 3,
-            icon: <Menu />,
-            title: "Portfolio Website",
-            description: "Creating sleek and responsive portfolio websites to showcase your work effectively.",
+            icon: Building2,
+            title: "Corporate Website",
+            description: "Build a powerful online presence with a lightning-fast, secure website that reflects your brand's professionalism.",
         },
         {
             id: 4,
-            icon: <Menu />,
-            title: "Application Deployment",
-            description: "Efficiently deploying and optimizing applications for seamless performance.",
+            icon: Briefcase,
+            title: "Portfolio Website",
+            description: "Showcase your work through a visually stunning portfolio that turns visitors into admirers and clients.",
         },
         {
             id: 5,
-            icon: <Menu />,
-            title: "Website SEO",
-            description: "Improving your website's visibility and search engine rankings.",
+            icon: RocketIcon,
+            title: "Application Deployment",
+            description: "Deploy your applications with confidence, ensuring optimal performance across all platforms.",
         },
         {
             id: 6,
-            icon: <Menu />,
-            title: "Web Development",
-            description: "Developing robust, scalable, and responsive web applications.",
+            icon: SearchCode,
+            title: "Website SEO",
+            description: "Climb search rankings and drive organic traffic with proven SEO strategies that deliver real results.",
         },
     ];
+
 
     return (
         <section id="services" className="container py-20 mx-auto px-4 border-b border-gray-300">
@@ -62,28 +71,27 @@ const Services = () => {
 
 export default Services;
 
-const ServiceCard = ({ icon, title, description }) => {
+const ServiceCard = ({ icon: Icon, title, description }) => {
     return (
         <div className={`${styles.card} group flex flex-col items-start relative`}>
             {/* Background Circle */}
             <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#FF5800] group-hover:scale-[900%] duration-500 z-[-1] op" />
 
             {/* Icon */}
-            <Globe className="text-primary group-hover:text-white mb-6" size={50} />
-
+            <Icon className="text-primary group-hover:text-white mb-12" size={50} />
             {/* Title */}
             <h3 className="text-xl md:text-2xl font-bold text-black/80 group-hover:text-white transition-all duration-300">
                 {title}
             </h3>
 
             {/* Description */}
-            <p className=" text-gray-500 text-sm group-hover:text-white transition-all duration-300">
+            <p className=" mt-4 text-gray-500 group-hover:text-white transition-all duration-300">
                 {description}
             </p>
 
             {/* Arrow */}
-            <span className=" text-gray-600 group-hover:text-white self-end transition-all duration-300">
-                <ArrowRight />
+            <span className="mt-8 text-gray-600 group-hover:text-white self-end transition-all duration-300">
+                <ArrowRight size={30} />
             </span>
         </div>
     );

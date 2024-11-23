@@ -1,17 +1,16 @@
 .card {
     width: 100%;
     max-width: 350px; /* Ensure cards have a maximum width */
-    height: 350px; /* Allow height to adjust based on content */
+    height: 380px; /* Allow height to adjust based on content */
     position: relative;
     border-radius: 10px;
-    padding: 50px 50px; /* Adjust padding for better spacing */
+    padding: 30px 30px; /* Adjust padding for better spacing */
     background: linear-gradient(145deg, #d9dcdf, #ffffff);
     box-shadow: 20px 20px 50px #cacaca, -20px -20px 50px #ffffff;
     overflow: hidden;
     transition: transform 0.5s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .card:hover {
