@@ -1,18 +1,21 @@
 .card {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    max-width: 350px; /* Ensure cards have a maximum width */
+    height: 350px; /* Allow height to adjust based on content */
     position: relative;
     border-radius: 10px;
-    padding: 50px 50px;
+    padding: 50px 50px; /* Adjust padding for better spacing */
     background: linear-gradient(145deg, #d9dcdf, #ffffff);
-    box-shadow: 20px 20px 50px #cacaca,
-        -20px -20px 50px #ffffff;
+    box-shadow: 20px 20px 50px #cacaca, -20px -20px 50px #ffffff;
     overflow: hidden;
     transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
     background: #E80B31;
-    transform: translateY(0.5em);
+    transform: translateY(-10px); /* Lift the card slightly on hover */
     transition: transform 0.5s, background 0.8s ease-in-out;
 }

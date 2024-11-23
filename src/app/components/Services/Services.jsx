@@ -1,58 +1,60 @@
-import { ArrowBigRight, ArrowRight, Globe, Menu, Tag } from 'lucide-react';
+import { ArrowRight, Globe, Menu, Tag } from 'lucide-react';
 import React from 'react';
-import styles from './Services.module.css'
+import styles from './Services.module.css';
 
 const Services = () => {
-
     const services = [
         {
             id: 1,
             icon: <Tag />,
-            title: "Web Development",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            title: "Custom Software Solution",
+            description: "I create tailored software solutions designed to meet your unique business needs.",
         },
         {
             id: 2,
             icon: <Menu />,
-            title: "UI/UX Design",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            title: "Corporate Website",
+            description: "Building fast, user-friendly, and professional websites for corporations.",
         },
         {
             id: 3,
             icon: <Menu />,
-            title: "Content Creation",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            title: "Portfolio Website",
+            description: "Creating sleek and responsive portfolio websites to showcase your work effectively.",
         },
         {
             id: 4,
             icon: <Menu />,
-            title: "Web Development",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            title: "Application Deployment",
+            description: "Efficiently deploying and optimizing applications for seamless performance.",
         },
         {
             id: 5,
             icon: <Menu />,
-            title: "Web Development",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            title: "Website SEO",
+            description: "Improving your website's visibility and search engine rankings.",
         },
         {
             id: 6,
             icon: <Menu />,
             title: "Web Development",
-            description: "I develop websites that are fast, user-friendly, and optimized for search engines.",
+            description: "Developing robust, scalable, and responsive web applications.",
         },
-    ]
+    ];
 
     return (
-        <section id='services' className='container py-20 mx-auto border-b border-gray-300'>
-            <p className=' text-primary'>SERVICES</p>
-            <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>What I Do</h2>
-            <div className='flex flex-wrap justify-around gap-8 mt-8'>
-                {
-                    services.map((service) => (
-                        <ServiceCard key={service.id} icon={service.icon} title={service.title} description={service.description} />
-                    ))
-                }
+        <section id="services" className="container py-20 mx-auto px-4 border-b border-gray-300">
+            <p className="text-primary text-center">SERVICES</p>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-800 text-center my-4">What I Do</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                {services.map((service) => (
+                    <ServiceCard
+                        key={service.id}
+                        icon={service.icon}
+                        title={service.title}
+                        description={service.description}
+                    />
+                ))}
             </div>
         </section>
     );
@@ -60,20 +62,29 @@ const Services = () => {
 
 export default Services;
 
-
 const ServiceCard = ({ icon, title, description }) => {
     return (
-        <div className={`${styles.card} cursor-pointer shrink-0 flex flex-col items-start gap-3 group`}>
+        <div className={`${styles.card} group flex flex-col items-start relative`}>
+            {/* Background Circle */}
             <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#FF5800] group-hover:scale-[900%] duration-500 z-[-1] op" />
-            <Globe size={50} className='text-primary group-hover:text-white mb-6' />
-            <p className="font-bold text-2xl group-hover:text-white text-black/80">
-                WEBSITE SEO
+
+            {/* Icon */}
+            <Globe className="text-primary group-hover:text-white mb-6" size={50} />
+
+            {/* Title */}
+            <h3 className="text-xl md:text-2xl font-bold text-black/80 group-hover:text-white transition-all duration-300">
+                {title}
+            </h3>
+
+            {/* Description */}
+            <p className=" text-gray-500 text-sm group-hover:text-white transition-all duration-300">
+                {description}
             </p>
-            <p className="text-gray-400 text-sm group-hover:text-white">
-                Website ravida surna eveti semen the conse tusio anivite dianne one nivam
-                acestion vue artin dictum.
-            </p>
-            <span className='text-gray-600 group-hover:text-white items-end'><ArrowRight /></span>
+
+            {/* Arrow */}
+            <span className=" text-gray-600 group-hover:text-white self-end transition-all duration-300">
+                <ArrowRight />
+            </span>
         </div>
     );
-}
+};
