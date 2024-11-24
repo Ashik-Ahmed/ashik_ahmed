@@ -7,21 +7,21 @@ const Education = () => {
             institute: "Daffodil International University",
             degree: "Bachelor of Computer Science and Engineering",
             period: "2015 - 2019",
-            description: "The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+            description: "Specialized in programming languages, data structures, and algorithms. Led development of 'Chhad Krishi' - an Android app for rooftop agriculture that connects farmers directly with Upazilla Agriculture Officers across Bangladesh and provides live price tracking of daily commodities.",
             result: "3.46/4.00"
         },
         {
             institute: "Cantonment Public School and College, Rangpur",
             degree: "Higher Secondary Certificate (HSC)",
             period: "2010 - 2012",
-            description: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-            result: `5.00/5.00`
+            description: "Completed HSC with a cumulative GPA of 5.00/5.00. Active participation in school's sports and cultural activities.",
+            result: "5.00/5.00"
         },
         {
             institute: "Mirzapur High School",
             degree: "Secondary School Certificate (SSC)",
             period: "2008 - 2010",
-            description: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+            description: "Excelled in core subjects with perfect scores in mathematics and science. Awarded by the Member of Parliament (MP) for outstanding performance in SSC examination. Active involvement in school's extracurricular activities and leadership roles.",
             result: "5.00/5.00"
         },
     ];
@@ -66,7 +66,8 @@ const EducationCard = ({ education }) => {
                     <div>
                         <h3 className="text-md md:text-xl font-semibold mb-1">{education?.institute}</h3>
                         <p className="text-sm mb-4">
-                            {education?.degree} ({education?.period})
+                            {education?.degree}
+                            {/* ({education?.period}) */}
                         </p>
                     </div>
                     {/* Result badge */}
