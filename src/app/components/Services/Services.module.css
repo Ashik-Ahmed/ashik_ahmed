@@ -4,7 +4,7 @@
     height: 380px; /* Allow height to adjust based on content */
     position: relative;
     border-radius: 10px;
-    padding: 30px 30px; /* Adjust padding for better spacing */
+    padding: 50px 30px; /* Adjust padding for better spacing */
     background: linear-gradient(145deg, #d9dcdf, #ffffff);
     box-shadow: 20px 20px 50px #cacaca, -20px -20px 50px #ffffff;
     overflow: hidden;
@@ -15,6 +15,6 @@
 
 .card:hover {
     background: #E80B31;
-    transform: translateY(-10px); /* Lift the card slightly on hover */
+    transform: translateY(-1px); 
     transition: transform 0.5s, background 0.8s ease-in-out;
 }

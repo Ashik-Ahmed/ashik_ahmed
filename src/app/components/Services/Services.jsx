@@ -26,21 +26,21 @@ const Services = () => {
         },
         {
             id: 3,
-            icon: Building2,
-            title: "Corporate Website",
-            description: "Build a powerful online presence with a lightning-fast, secure website that reflects your brand's professionalism.",
+            icon: Briefcase,
+            title: "API & Database Integration",
+            description: "Design/ Integrate APIs and databases for smooth functionality and data access for applications.",
         },
         {
             id: 4,
-            icon: Briefcase,
-            title: "Portfolio Website",
-            description: "Showcase your work through a visually stunning portfolio that turns visitors into admirers and clients.",
-        },
-        {
-            id: 5,
             icon: RocketIcon,
             title: "Application Deployment",
             description: "Deploy your applications with confidence, ensuring optimal performance across all platforms.",
+        },
+        {
+            id: 5,
+            icon: Building2,
+            title: "Corporate Website",
+            description: "Build a powerful online presence with a lightning-fast, secure website that reflects your brand's professionalism.",
         },
         {
             id: 6,
@@ -78,7 +78,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
             <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#FF5800] group-hover:scale-[900%] duration-500 z-[-1] op" />
 
             {/* Icon */}
-            <Icon className="text-primary group-hover:text-white mb-12" size={50} />
+            <Icon className="text-primary group-hover:text-white mb-8" size={50} />
             {/* Title */}
             <h3 className="text-xl md:text-2xl font-bold text-black/80 group-hover:text-white transition-all duration-300">
                 {title}
@@ -90,7 +90,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
             </p>
 
             {/* Arrow */}
-            <span className="mt-8 text-gray-600 group-hover:text-white self-end transition-all duration-300">
+            <span className="mt-auto text-gray-600 group-hover:text-white self-end transition-all duration-300">
                 <ArrowRight size={30} />
             </span>
         </div>
