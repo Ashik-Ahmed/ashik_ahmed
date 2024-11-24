@@ -7,14 +7,14 @@ const Experience = () => {
             title: "Infozillion Teletech BD Ltd.",
             organization: "Tech Support Engineer",
             period: "2019 - Present",
-            description: "The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+            description: "Managing and maintaining MNP (Mobile Number Portability) platform for Bangladesh's telecom sector. Providing technical support, and collaborating with telecom operators to resolve critical issues. From personal interest, I developed a HR Management Software for the company which automates the HR processes.",
             duration: `${Math.floor((new Date() - new Date(2019, 5)) / (1000 * 60 * 60 * 24 * 365))}+ Years`
         },
         {
             title: "Freelance Software Developer",
             organization: "",
             period: "2022 - Present",
-            description: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+            description: "Developing custom web applications using React.js, Next.js, Node.js, MongoDB and PostgreSQL. Delivered multiple successful projects including web-based reporting platforms and corporate websites. Maintaining strong client relationships with 90% repeat business rate.",
             duration: `${Math.floor((new Date() - new Date(2022, 5)) / (1000 * 60 * 60 * 24 * 365))}+ Years`
         },
     ];
