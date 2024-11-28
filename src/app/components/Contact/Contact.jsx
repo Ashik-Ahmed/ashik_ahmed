@@ -45,15 +45,15 @@ const Contact = () => {
     return (
         <section id='contact' className='container py-20 mx-auto border-b border-gray-300'>
             <div className='text-center'>
-                <p className=' text-primary'>LET&apos;S CONNECT</p>
-                <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Contact</h2>
+                <p className=' text-primary'>CONTACT</p>
+                <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Let&apos;s Connect</h2>
             </div>
 
             <div className="flex flex-col md:flex-row gap-16 mt-8">
                 <div className={`${styles.card} md:w-5/12 relative flex flex-col justify-between gap-4 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
                     <div className="w-full  bg-white rounded-xl overflow-hidden">
                         <Image
-                            src="/contact.png"
+                            src="/contact.jpg"
                             alt="contact ashik ahmed"
                             width={288}
                             height={288}
