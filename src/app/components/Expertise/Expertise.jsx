@@ -21,6 +21,21 @@ const Expertise = () => {
             icon: "/skillIcons/frontend/React.svg",
             name: "React.js",
         },
+        {
+            id: 1,
+            icon: "/skillIcons/design/HTML5.svg",
+            name: "HTML5",
+        },
+        {
+            id: 2,
+            icon: "/skillIcons/design/CSS3.svg",
+            name: "CSS3",
+        },
+        {
+            id: 3,
+            icon: "/skillIcons/design/Tailwind.svg",
+            name: "Tailwind",
+        },
     ]
 
     const designSkills = [
@@ -113,8 +128,10 @@ const Expertise = () => {
 
     return (
         <section id='expertise' className='container py-20 mx-auto border-b border-gray-300'>
-            <p className=' text-primary'>EXPERTISE</p>
-            <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Skills I Have</h2>
+            <div className="text-center">
+                <p className=' text-primary'>EXPERTISE</p>
+                <h2 className='text-4xl md:text-7xl font-bold text-gray-800 my-4'>Skills I Have</h2>
+            </div>
             <div>
                 <div className='mt-8'>
                     <p className='text-xl text-primary font-semibold'>Frontend:</p>
@@ -127,7 +144,7 @@ const Expertise = () => {
                         }
                     </div>
                 </div>
-                <div className='mt-8'>
+                {/* <div className='mt-8'>
                     <p className='text-xl text-primary font-semibold'>Design:</p>
                     <div className='grid grid-cols-3 md:flex gap-4 mt-4'>
 
@@ -137,7 +154,7 @@ const Expertise = () => {
                             ))
                         }
                     </div>
-                </div>
+                </div> */}
                 <div className='mt-8'>
                     <p className='text-xl text-primary font-semibold'>Backend:</p>
                     <div className='grid grid-cols-3 md:flex gap-4 mt-4'>

@@ -102,8 +102,8 @@ const ProjectCard = ({ id, name, image, description, tags }) => {
                     {tags.map((tag) => (
                         <span
                             key={tag}
-                            style={{ backgroundColor: bgColor, color: textColor }}
-                            className="text-xs font-semibold px-2 py-0.5 rounded-xl shadow-md"
+                            // style={{ backgroundColor: bgColor, color: textColor }}
+                            className="text-xs font-semibold px-2 py-0.5 rounded-xl shadow-md bg-primary bg-opacity-70 text-white"
                         >
                             {tag}
                         </span>
