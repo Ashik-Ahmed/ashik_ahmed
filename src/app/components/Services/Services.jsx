@@ -28,7 +28,7 @@ const Services = () => {
             id: 3,
             icon: Briefcase,
             title: "API & Database Integration",
-            description: "Design/ Integrate APIs and databases for smooth functionality and data access for applications.",
+            description: "Design/ Integrate APIs and databases for smooth functionality and data access for existing applications.",
         },
         {
             id: 4,
@@ -39,7 +39,7 @@ const Services = () => {
         {
             id: 5,
             icon: Building2,
-            title: "Corporate Website",
+            title: "Corporate/Portfolio Website",
             description: "Build a powerful online presence with a lightning-fast, secure website that reflects your brand's professionalism.",
         },
         {

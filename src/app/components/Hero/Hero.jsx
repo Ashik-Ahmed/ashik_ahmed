@@ -44,7 +44,7 @@ const Hero = () => {
                 <div className='md:w-8/12 md:order-1 mt-8 md:mt-0'>
                     <p className='text-xl mb-8'>WELCOME TO MY WORLD</p>
                     <h1 className='md:text-6xl text-3xl font-extrabold'>Hi, I&apos;m <span className='text-primary'>Ashik Ahmed</span></h1>
-                    <h2 className='md:text-4xl text-2xl font-bold mt-8'> <span className='text-primary'>a</span> Software Developer</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold mt-8'> <span className='text-primary'>expert</span> Web Developer</h2>
 
                     <div className="mt-16">
                         <p>FIND WITH ME</p>
