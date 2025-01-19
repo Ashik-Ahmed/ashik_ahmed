@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './Portfolio.module.css'
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const Portfolio = () => {
 
@@ -9,6 +10,7 @@ const Portfolio = () => {
         {
             id: 1,
             name: "HR Management System",
+            slug: "hr-management-system",
             image: "/projects/project-1.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
             tags: ["Full-Stack", "Dashboard"],
@@ -16,6 +18,7 @@ const Portfolio = () => {
         {
             id: 2,
             name: "A2P SMS Monitoring Portal",
+            slug: "a2p-sms-monitoring-portal",
             image: "/projects/project-1.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
             tags: ["Full-Stack", "Dashboard"],
@@ -23,6 +26,7 @@ const Portfolio = () => {
         {
             id: 3,
             name: "Aircraft Inventory Management System",
+            slug: "aircraft-inventory-management-system",
             image: "/projects/project-1.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
             tags: ["Full-Stack", "Dashboard"],
@@ -30,6 +34,7 @@ const Portfolio = () => {
         {
             id: 4,
             name: "Aircraft Inventory Management System",
+            slug: "aircraft-inventory-management-system",
             image: "/projects/project-1.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
             tags: ["Full-Stack", "Dashboard"],
@@ -49,6 +54,7 @@ const Portfolio = () => {
                             key={project.id}
                             id={project.id}
                             name={project.name}
+                            slug={project.slug}
                             image={project.image}
                             description={project.description}
                             tags={project.tags}
@@ -63,7 +69,7 @@ const Portfolio = () => {
 export default Portfolio;
 
 
-const ProjectCard = ({ id, name, image, description, tags }) => {
+const ProjectCard = ({ id, name, slug, image, description, tags }) => {
 
     // Generate a random hex color and adjust it for better contrast
     const getRandomColorPair = () => {
@@ -87,7 +93,7 @@ const ProjectCard = ({ id, name, image, description, tags }) => {
     const { bgColor, textColor } = getRandomColorPair();
 
     return (
-        <div className={`${styles.card} relative flex flex-col justify-between gap-4 w-80 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
+        <Link href={`/portfolio/${slug}`} className={`${styles.card} relative flex flex-col justify-between gap-4 w-80 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md group`}>
             <div className="w-full p-4 min-h-[14rem] bg-white rounded-xl overflow-hidden">
                 <Image
                     src={image}
@@ -116,7 +122,7 @@ const ProjectCard = ({ id, name, image, description, tags }) => {
                     </h5>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 
