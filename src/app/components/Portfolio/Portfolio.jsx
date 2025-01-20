@@ -33,8 +33,8 @@ const Portfolio = () => {
         },
         {
             id: 4,
-            name: "Aircraft Inventory Management System",
-            slug: "aircraft-inventory-management-system",
+            name: "Aircraft Inventory Management System 2",
+            slug: "aircraft-inventory-management-system-2",
             image: "/projects/project-1.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
             tags: ["Full-Stack", "Dashboard"],
@@ -51,13 +51,13 @@ const Portfolio = () => {
                 {
                     projects.map((project) => (
                         <ProjectCard
-                            key={project.id}
-                            id={project.id}
-                            name={project.name}
-                            slug={project.slug}
-                            image={project.image}
-                            description={project.description}
-                            tags={project.tags}
+                            key={project?.id}
+                            id={project?.id}
+                            name={project?.name}
+                            slug={project?.slug}
+                            image={project?.image}
+                            description={project?.description}
+                            tags={project?.tags}
                         />
                     ))
                 }

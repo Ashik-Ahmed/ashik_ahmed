@@ -11,13 +11,14 @@ export const metadata = {
   title: "Ashik Ahmed - Web Developer from Bangladesh",
   description: "Deliver web solutions for your business",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` antialiased bg-[#ECF0F3]`}>
         <Header />
-        {children}
+        <div className=" px-4 max-w-6xl mx-auto mt-20 mb-12">
+          {children}
+        </div>
       </body>
     </html>
   );

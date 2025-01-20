@@ -10,7 +10,7 @@ import Services from "./components/Services/Services";
 
 export default function Home() {
   return (
-    <main className="px-4 max-w-6xl mx-auto my-12">
+    <main>
       <Hero />
       <Services />
       <Expertise />

@@ -22,17 +22,17 @@ const Expertise = () => {
             name: "React.js",
         },
         {
-            id: 1,
+            id: 4,
             icon: "/skillIcons/design/HTML5.svg",
             name: "HTML5",
         },
         {
-            id: 2,
+            id: 5,
             icon: "/skillIcons/design/CSS3.svg",
             name: "CSS3",
         },
         {
-            id: 3,
+            id: 6,
             icon: "/skillIcons/design/Tailwind.svg",
             name: "Tailwind",
         },
