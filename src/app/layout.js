@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` antialiased bg-[#ECF0F3]`}>
         <Header />
-        <div className=" px-4 max-w-6xl mx-auto mt-20 mb-12">
+        <div className=" px-4 max-w-6xl mx-auto mt-24 mb-12">
           {children}
         </div>
       </body>
