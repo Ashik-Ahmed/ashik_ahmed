@@ -70,23 +70,6 @@ const ProjectDetails = () => {
                 </ul>
             </section>
 
-            {/* Video */}
-            <section className="my-12">
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
-                    Project Demo Video
-                </h2>
-                <div className="w-full">
-                    <iframe
-                        src={project.video}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-[500px] rounded-lg shadow-lg"
-                    ></iframe>
-                </div>
-            </section>
-
 
             {/* Gallery */}
             <section className="my-12">
@@ -108,6 +91,23 @@ const ProjectDetails = () => {
                             />
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* Video */}
+            <section className="my-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+                    Project Demo Video
+                </h2>
+                <div className="w-full">
+                    <iframe
+                        src={project.video}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-[500px] rounded-lg shadow-lg"
+                    ></iframe>
                 </div>
             </section>
         </div>
