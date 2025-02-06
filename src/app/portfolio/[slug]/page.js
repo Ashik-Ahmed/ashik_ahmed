@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { CircleCheck, Code, ExternalLink, Settings, UserRoundCog, Youtube } from "lucide-react";
+import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 
 const ProjectDetails = () => {
     const project = {
@@ -27,7 +27,7 @@ const ProjectDetails = () => {
             { name: "Tailwind", logo: "/tech/tailwind.svg" },
             { name: "NextAuth", logo: "/tech/nextauth.svg" }
         ],
-        images: ["/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png"],
+        images: ["/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png"],
         livePreview: "#",
         video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     };
@@ -139,7 +139,7 @@ const ProjectDetails = () => {
             </section>
 
             {/* Image Gallery */}
-            <section className="py-20">
+            {/* <section className="py-20">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <h2 className="text-3xl font-bold text-center mb-12">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
@@ -160,6 +160,17 @@ const ProjectDetails = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section> */}
+
+            <section className="py-20">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <h2 className="text-3xl font-bold text-center mb-12">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                            User Interface Showcase
+                        </span>
+                    </h2>
+                    <ImageCarousel images={project.images} />
                 </div>
             </section>
 
