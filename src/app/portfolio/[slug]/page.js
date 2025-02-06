@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CircleCheck, Code, ExternalLink, Settings, UserRoundCog, Youtube } from "lucide-react";
 import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
+import Link from "next/link";
 
 const ProjectDetails = () => {
     const project = {
@@ -38,20 +39,20 @@ const ProjectDetails = () => {
             <section className="relative pt-24 pb-16">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center animate-fadeInUp">
-                        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 mb-6">
+                        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-6">
                             {project.title}
                         </h1>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                             {project.description}
                         </p>
                         <div className="flex justify-center gap-4 mb-12">
-                            <a
+                            <Link
                                 href={project.livePreview}
-                                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105"
+                                className="flex items-center gap-2 bg-primary hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105"
                             >
                                 <ExternalLink className="text-xl" />
                                 Live Preview
-                            </a>
+                            </Link>
                             <a
                                 href={project.video}
                                 className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105"
@@ -86,7 +87,7 @@ const ProjectDetails = () => {
             <section className="py-20 bg-gradient-to-b from-white to-gray-50">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                             System Walkthrough
                         </span>
                     </h2>
@@ -110,7 +111,7 @@ const ProjectDetails = () => {
                                 className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:scale-105"
                             >
                                 <div className="flex items-start gap-6">
-                                    <div className="p-4 bg-indigo-50 rounded-xl text-indigo-600">
+                                    <div className="p-4 bg-indigo-50 rounded-xl text-primary">
                                         {feature.icon}
                                     </div>
                                     <div>
@@ -130,7 +131,7 @@ const ProjectDetails = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {project.stats.map((stat, index) => (
                             <div key={index} className="text-center p-6">
-                                <div className="text-4xl font-bold text-indigo-600 mb-2">{stat.value}</div>
+                                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
                                 <div className="text-gray-600 uppercase text-sm tracking-wide">{stat.label}</div>
                             </div>
                         ))}
@@ -142,7 +143,7 @@ const ProjectDetails = () => {
             {/* <section className="py-20">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                             User Interface Showcase
                         </span>
                     </h2>
@@ -166,7 +167,7 @@ const ProjectDetails = () => {
             <section className="py-20">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                             User Interface Showcase
                         </span>
                     </h2>
@@ -182,7 +183,7 @@ const ProjectDetails = () => {
                     <div className="flex justify-center gap-4">
                         <a
                             href={project.livePreview}
-                            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg transition-all"
+                            className="flex items-center gap-2 bg-primary hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg transition-all"
                         >
                             <ExternalLink className="text-xl" />
                             Launch Live Demo

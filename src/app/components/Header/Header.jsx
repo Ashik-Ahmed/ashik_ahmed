@@ -119,7 +119,7 @@ const Header = () => {
                                 ))}
                             </div>
                             <div className="ml-4">
-                                <Link href="#contact">
+                                <Link href="/#contact">
                                     <Button label="Contact" />
                                 </Link>
                             </div>
