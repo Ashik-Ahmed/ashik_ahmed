@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CircleCheck, Code, ExternalLink, Phone, Settings, UserRoundCog, Youtube } from "lucide-react";
+import { CircleCheck, Code, ExternalLink, MonitorPlay, Phone, Settings, UserRoundCog, Youtube } from "lucide-react";
 import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 import Link from "next/link";
 
@@ -9,6 +9,10 @@ const ProjectDetails = () => {
         description: "Revolutionizing HR operations through intelligent automation and real-time analytics.",
         tags: ["React", "Node.js", "MongoDB", "AWS", "JWT"],
         features: [
+            { title: "Role Management", icon: <UserRoundCog />, content: "Granular access controls with custom permission sets" },
+            { title: "Mobile Responsive", icon: <Phone />, content: "Fully optimized cross-device experience" },
+            { title: "CI/CD Pipeline", icon: <CircleCheck />, content: "Automated deployments with GitHub Actions" },
+            { title: "Documentation", icon: <Code />, content: "Comprehensive developer & user guides" },
             { title: "Dashboard Analytics", icon: <Settings />, content: "Interactive data visualization for HR metrics" },
             { title: "Employee Portal", icon: <UserRoundCog />, content: "Self-service portal for leave & payroll management" },
             { title: "API Integration", icon: <Code />, content: "RESTful APIs with JWT authentication" },
@@ -36,46 +40,55 @@ const ProjectDetails = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-16">
+            <section className="relative pt-20 pb-12 md:pt-28 md:pb-16">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="text-center animate-fadeInUp">
-                        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-6">
+                    <div className="text-center space-y-6">
+                        <div className="inline-block bg-gradient-to-r from-primary to-secondary p-1 rounded-full mb-8 animate-fadeIn">
+                            <span className="text-sm font-semibold text-white px-4 py-2 rounded-full bg-gray-900/90">
+                                Enterprise Solution
+                            </span>
+                        </div>
+                        <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary leading-tight">
                             {project.title}
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             {project.description}
                         </p>
-                        <div className="flex justify-center gap-4 mb-12">
+                        <div className="flex flex-col sm:flex-row justify-center gap-3 mt-10">
                             <Link
                                 href={project.livePreview}
-                                className="flex items-center gap-2 bg-primary hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105"
+                                className="flex items-center gap-2 bg-primary hover:bg-indigo-700 text-white px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg hover:shadow-primary/30"
                             >
-                                <ExternalLink className="text-xl" />
+                                <ExternalLink size={20} />
                                 Live Preview
                             </Link>
                             <a
-                                href={project.video}
-                                className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg transition-all transform hover:scale-105"
+                                href="#video-demo"
+                                className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg hover:shadow-gray-900/30"
                             >
-                                <Youtube className="text-xl" />
+                                <MonitorPlay size={20} />
                                 Watch Demo
                             </a>
                         </div>
                     </div>
 
-                    {/* Tech Stack Marquee */}
-                    <div className="py-8 bg-white/50 backdrop-blur-md rounded-xl shadow-lg border border-gray-100">
-                        <div className="flex justify-center gap-12 items-center flex-wrap">
+                    {/* Tech Stack Grid */}
+                    <div className="mt-16 p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-200">
+                        <h3 className="text-center text-gray-500 text-sm font-semibold mb-6">TECHNOLOGY STACK</h3>
+                        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                             {project.techStack.map((tech, index) => (
-                                <div key={index} className="flex items-center gap-2 opacity-75 hover:opacity-100 transition-opacity">
+                                <div
+                                    key={index}
+                                    className="flex flex-col items-center p-4 hover:bg-gray-50 rounded-xl transition-colors"
+                                >
                                     <Image
                                         src={tech.logo}
                                         alt={tech.name}
-                                        width={40}
-                                        height={40}
-                                        className="h-8 w-auto"
+                                        width={48}
+                                        height={48}
+                                        className="h-12 w-12 object-contain transition-all"
                                     />
-                                    <span className="text-gray-600 font-medium">{tech.name}</span>
+                                    <span className="mt-2 text-sm text-gray-600 font-medium">{tech.name}</span>
                                 </div>
                             ))}
                         </div>
