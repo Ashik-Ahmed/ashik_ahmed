@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CircleCheck, Code, ExternalLink, Settings, UserRoundCog, Youtube } from "lucide-react";
+import { CircleCheck, Code, ExternalLink, Phone, Settings, UserRoundCog, Youtube } from "lucide-react";
 import ImageCarousel from "@/app/components/ImageCarousel/ImageCarousel";
 import Link from "next/link";
 
@@ -178,16 +178,16 @@ const ProjectDetails = () => {
             {/* CTA Section */}
             <section className="py-20 bg-gray-900">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">Ready to See More?</h2>
-                    <p className="text-gray-300 mb-8 text-xl">Explore the full potential of this HR solution</p>
+                    <h2 className="text-4xl font-bold text-white mb-6">Want to get this product?</h2>
+                    <p className="text-gray-300 mb-8 text-xl">Explore the full potential of this Software</p>
                     <div className="flex justify-center gap-4">
-                        <a
-                            href={project.livePreview}
+                        <Link
+                            href="/#contact"
                             className="flex items-center gap-2 bg-primary hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg transition-all"
                         >
-                            <ExternalLink className="text-xl" />
-                            Launch Live Demo
-                        </a>
+                            <Phone className="text-xl" />
+                            Contact Us
+                        </Link>
                     </div>
                 </div>
             </section>
