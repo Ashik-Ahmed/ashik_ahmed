@@ -75,7 +75,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
     return (
         <div className={`${styles.card} group flex flex-col items-start relative`}>
             {/* Background Circle */}
-            <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#FF5800] group-hover:scale-[900%] duration-500 z-[-1] op" />
+            <div className="circle absolute h-[5em] w-[5em] -top-[5.5em] -right-[5.5em] rounded-full bg-[#6963ec] group-hover:scale-[900%] duration-500 z-[-1] op" />
 
             {/* Icon */}
             <Icon className="text-primary group-hover:text-white mb-8" size={50} />
@@ -90,7 +90,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
             </p>
 
             {/* Arrow */}
-            <span className="mt-auto text-gray-600 group-hover:text-white self-end transition-all duration-300">
+            <span className="mt-auto text-primary group-hover:text-white self-end transition-all duration-300">
                 <ArrowRight size={30} />
             </span>
         </div>
