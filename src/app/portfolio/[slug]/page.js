@@ -97,39 +97,51 @@ const ProjectDetails = () => {
             </section>
 
             {/* Video Demo Section */}
-            <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                            System Walkthrough
-                        </span>
-                    </h2>
-                    <div className="relative aspect-video rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
-                        <iframe
-                            src={project.video}
-                            className="absolute inset-0 w-full h-full"
-                            allowFullScreen
-                        />
+            <section id="video-demo" className="py-16 bg-gradient-to-b from-white to-gray-50">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+                        <div className="p-6 bg-gray-800 flex items-center gap-3">
+                            <div className="flex gap-2">
+                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span className="text-sm text-gray-300 font-mono">demo.mp4</span>
+                        </div>
+                        <div className="aspect-video bg-black">
+                            <iframe
+                                src={project.video}
+                                className="w-full h-full"
+                                allowFullScreen
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Features Grid */}
-            <section className="py-20">
+            <section className="py-16">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-3">
+                            Core Features
+                        </h2>
+                        <p className="text-gray-600 max-w-lg mx-auto text-sm">Key functionalities that drive efficiency</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {project.features.map((feature, index) => (
                             <div
                                 key={index}
-                                className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 hover:scale-105"
+                                className="group relative p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100"
                             >
-                                <div className="flex items-start gap-6">
-                                    <div className="p-4 bg-indigo-50 rounded-xl text-primary">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary p-2">
                                         {feature.icon}
                                     </div>
-                                    <div>
-                                        <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>
-                                        <p className="text-gray-600">{feature.content}</p>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-semibold mb-1.5">{feature.title}</h3>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{feature.content}</p>
                                     </div>
                                 </div>
                             </div>
@@ -139,13 +151,17 @@ const ProjectDetails = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-20 bg-indigo-50">
+            <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {project.stats.map((stat, index) => (
                             <div key={index} className="text-center p-6">
-                                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                                <div className="text-gray-600 uppercase text-sm tracking-wide">{stat.label}</div>
+                                <div className="text-5xl font-bold text-primary mb-3 animate-number">
+                                    {stat.value}
+                                </div>
+                                <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">
+                                    {stat.label}
+                                </div>
                             </div>
                         ))}
                     </div>
