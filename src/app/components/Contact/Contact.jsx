@@ -68,7 +68,7 @@ const Contact = () => {
                         <p className="my-4">I am a software engineer based in Dhaka, Bangladesh. I specialize in web development and have experience working on a wide range of projects.</p>
 
                         <p className="inline-block">
-                            Whatsapp:
+                            <span className='text-primary font-semibold'>Whatsapp:</span>
                             <Link
                                 href="https://wa.me/+8801521464568"
                                 target="_blank"
@@ -79,7 +79,7 @@ const Contact = () => {
                             </Link>
                         </p>
                         <p className="inline-block mt-2">
-                            Email:
+                            <span className='text-primary font-semibold'>Email:</span>
                             <Link
                                 href="mailto:ashikahmed121@gmail.com"
                                 className="ml-2 hover:text-primary group/item relative inline-block">

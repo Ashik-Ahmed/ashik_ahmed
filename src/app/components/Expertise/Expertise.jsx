@@ -198,7 +198,7 @@ export default Expertise;
 
 const SkillsCard = ({ icon, name }) => {
     return (
-        <div className={`${styles.card} w-[110px] cursor-pointer shrink-0 flex flex-col items-start gap-3 group`}>
+        <div className={`${styles.card} w-[110px] cursor-pointer shrink-0 flex flex-col items-center gap-3 group`}>
 
             <Image src={icon} alt="ashik ahmed" width={50} height={50} className='mx-auto' />
 
