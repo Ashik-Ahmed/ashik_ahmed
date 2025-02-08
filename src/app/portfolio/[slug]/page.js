@@ -156,7 +156,7 @@ const ProjectDetails = () => {
                                 </p>
 
                                 {/* Hover Line Animation */}
-                                <div className="absolute bottom-0 left-0 w-0 h-[2px] rounded-xl bg-primary transition-all duration-300 group-hover:w-full"></div>
+                                <div className="absolute bottom-0 left-0 w-0 h-[4px] rounded-xl bg-primary transition-all duration-300 group-hover:w-full"></div>
                             </div>
                         ))}
                     </div>
@@ -196,7 +196,7 @@ const ProjectDetails = () => {
             <section className="py-20 bg-gray-900">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-4xl font-bold text-white mb-6">Want to get this product?</h2>
-                    <p className="text-gray-300 mb-8 text-xl">Explore the full potential of this Software</p>
+                    <p className="text-gray-300 mb-8 text-xl">Explore the full potential with customization according to your needs</p>
                     <div className="flex justify-center gap-4">
                         <Link
                             href="/#contact"
