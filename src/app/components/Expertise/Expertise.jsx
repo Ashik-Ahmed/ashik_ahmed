@@ -200,7 +200,7 @@ const SkillsCard = ({ icon, name }) => {
     return (
         <div className={`${styles.card} w-[110px] cursor-pointer shrink-0 flex flex-col items-start gap-3 group`}>
 
-            <img src={icon} alt="ashik ahmed" className='mx-auto' />
+            <Image src={icon} alt="ashik ahmed" width={50} height={50} className='mx-auto' />
 
             <p className='text-xs font-semibold text-gray-800'>{name}</p>
         </div>
