@@ -28,3 +28,28 @@
     transform: scale(0.9);
     fill: #333333;
 }
+
+
+.serviceCard {
+    /* width: 100%;
+    max-width: 350px;
+    height: 380px; */
+    /* Allow height to adjust based on content */
+    position: relative;
+    border-radius: 10px;
+    padding: 20px 20px;
+    /* Adjust padding for better spacing */
+    background: linear-gradient(145deg, #d9dcdf, #ffffff);
+    box-shadow: 10px 10px 20px #cacaca, -10px -10px 20px #ffffff;
+    overflow: hidden;
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+.serviceCard:hover {
+    background: linear-gradient(135deg, #4F46E5, #9333EA);
+    transform: translateY(-1px);
+    transition: transform 0.5s, background 0.8s ease-in-out;
+} */

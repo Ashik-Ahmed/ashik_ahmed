@@ -140,7 +140,7 @@ const ProjectDetails = () => {
                         {project.features.map((feature, index) => (
                             <div
                                 key={index}
-                                className="group relative p-6 bg-white rounded-xl border border-gray-200 hover:border-primary/30 transition-all hover:shadow-lg"
+                                className={`${styles.serviceCard} group relative p-6 bg-white rounded-xl border border-gray-200 hover:border-primary/30 transition-all hover:shadow-lg`}
                             >
                                 {/* Number Indicator */}
                                 <div className="text-sm font-semibold text-primary mb-4">
