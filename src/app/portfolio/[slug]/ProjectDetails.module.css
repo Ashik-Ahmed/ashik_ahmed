@@ -1,5 +1,5 @@
 .card {
-    place-items: center;
+    place-items: start;
     background: linear-gradient(145deg, #d9dcdf, #ffffff);
     padding: 10px 5px;
     border-radius: 10px;

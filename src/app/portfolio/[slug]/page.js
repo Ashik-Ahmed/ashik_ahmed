@@ -217,9 +217,9 @@ export default ProjectDetails;
 
 const TechnologyCard = ({ icon, name }) => {
     return (
-        <div className={`${styles.card} w-[90px] md:min-w-[120px] md:w-fit cursor-pointer shrink-0 grid justify-items-center md:flex md:flex-row md:items-center gap-3 group`}>
+        <div className={`${styles.card} w-[90px] md:min-w-[140px] md:w-fit cursor-pointer shrink-0 grid justify-items-center md:flex md:flex-row md:items-center md:justify-start gap-3 group`}>
 
-            <Image src={icon} alt="ashik ahmed" width={50} height={50} className='mx-auto' />
+            <Image src={icon} alt="ashik ahmed" width={50} height={50} className="ml-2" />
 
             <p className='text-sm md:text-lg text-gray-800'>{name}</p>
         </div>
