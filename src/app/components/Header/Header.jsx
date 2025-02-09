@@ -15,7 +15,7 @@ const Header = () => {
     const [isClosing, setIsClosing] = useState(false);
 
     const currentPath = usePathname();
-    console.log(" currentPath: ", currentPath);
+    console.log(" currentPath: ", !!currentPath.split("/")[1], ": ", currentPath.split("/")[1]);
     console.log(" activeSection: ", activeSection);
 
     const toggleSidebar = () => {
@@ -115,10 +115,9 @@ const Header = () => {
                                     >
                                         {menu.name}
                                         {
-                                            console.log("menu.link: ", menu.link)
+                                            // console.log("menu.link: ", menu.link)
                                         }
-                                        <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link === "/" && activeSection === "/") ||
-                                            (menu.link.replace('/#', '') === activeSection)
+                                        <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link.replace('/#', '') === activeSection) || (!!currentPath.split("/")[1] == true && menu.link.replace('/#', '').includes(currentPath.split("/")[1]))
                                             ? 'w-full'
                                             : ''
                                             }`}></span>
