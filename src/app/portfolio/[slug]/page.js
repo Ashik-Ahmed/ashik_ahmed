@@ -8,7 +8,7 @@ const ProjectDetails = () => {
     const project = {
         title: "HR Management System",
         description: "Revolutionizing HR operations through intelligent automation and real-time analytics.",
-        tags: ["React", "Node.js", "MongoDB", "AWS", "JWT"],
+        tags: ["Full-Stack", "Dashboard"],
         features: [
             { title: "Role Management", content: "Granular access controls with custom permission sets" },
             { title: "Mobile Responsive", content: "Fully optimized cross-device experience" },
@@ -35,7 +35,24 @@ const ProjectDetails = () => {
         ],
         images: ["/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png", "/projects/project-1.png"],
         livePreview: "#",
-        video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        testimonials: [
+            {
+                name: "John Doe",
+                position: "HR Manager, XYZ Corp",
+                feedback: "This platform streamlined our employee management process and saved us countless hours!",
+            },
+        ],
+        challenges: [
+            {
+                problem: "Handling large employee data efficiently.",
+                solution: "Implemented MongoDB indexing and optimized queries.",
+            },
+            {
+                problem: "Ensuring secure access to sensitive HR data.",
+                solution: "Integrated JWT-based authentication and role-based access control.",
+            },
+        ],
     };
 
     return (
