@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css"
 import Button from "../ui/Button/Button";
 import Image from "next/image";
@@ -32,33 +32,43 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = [
-                "services", "expertise", "portfolio",
-                "experience", "education", "blogs", "contact"
-            ];
+            if (currentPath === "/") {
+                const sections = [
+                    "services", "expertise", "portfolio",
+                    "experience", "education", "blogs", "contact"
+                ];
 
-            // Check if at top of page
-            if (window.scrollY < 100 && currentPath === "/") {
-                setActiveSection("/");
-                return;
-            }
+                // At top of home page
+                if (window.scrollY < 100) {
+                    setActiveSection("/");
+                    return;
+                }
 
-            // Check other sections
-            for (let section of sections) {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100 && currentPath === `/`) {
-                        setActiveSection(section);
-                        return;
+                // Check other sections
+                for (let section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom >= 100) {
+                            setActiveSection(section);
+                            return;
+                        }
                     }
                 }
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        if (currentPath === "/") {
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+        } else {
+            // For non-home pages, use first path segment
+            const currentSegment = currentPath.split("/")[1];
+            setActiveSection(currentSegment || null);
+        }
+
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [currentPath]);
 
     const menus = [
         { id: 1, name: "Home", link: "/" },
@@ -105,21 +115,20 @@ const Header = () => {
                         <div className="hidden md:flex items-center">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 {menus.map((menu) => (
-                                    < Link
+                                    <Link
                                         key={menu.id}
                                         href={menu.link}
-                                        className={`relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group ${(menu.link.replace('/#', '') === activeSection)
-                                            ? 'text-primary'
-                                            : ''
+                                        className={`relative text-gray-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium uppercase group ${(menu.link === "/" && activeSection === "/") ||
+                                                (activeSection === menu.link.replace('/#', ''))
+                                                ? 'text-primary'
+                                                : ''
                                             }`}
                                     >
                                         {menu.name}
-                                        {
-                                            // console.log("menu.link: ", menu.link)
-                                        }
-                                        <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link.replace('/#', '') === activeSection) || (!!currentPath.split("/")[1] == true && menu.link.replace('/#', '').includes(currentPath.split("/")[1]))
-                                            ? 'w-full'
-                                            : ''
+                                        <span className={`absolute left-0 bottom-0 block h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full ${(menu.link === "/" && activeSection === "/") ||
+                                                (activeSection === menu.link.replace('/#', ''))
+                                                ? 'w-full'
+                                                : ''
                                             }`}></span>
                                     </Link>
                                 ))}
